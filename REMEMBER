@@ -1,0 +1,15 @@
+git repo: https://github.com/ravijo/ros_openpose
+
+in launch/config_azurekinect.launch
+    <arg name="point_cloud_in_depth_frame" value="true" /> => <arg name="point_cloud" value="true" />
+    <arg name="point_cloud_in_depth_frame" value="false" /> => <arg name="point_cloud" value="false" />
+
+Build with python 2.7
+    https://github.com/CMU-Perceptual-Computing-Lab/openpose/pull/1436/commits/f98c35228236d157d53a6d66952eaff87f37fbdd#diff-f8fde8c659fa89b589836b6139b49158b5d9df7d17da4719c52e0be3e5d3ea35
+
+Fix ros_openpose_synchronous.py
+    https://github.com/ravijo/ros_openpose/issues/45
+
+Other errors
+    https://github.com/ravijo/ros_openpose/issues/41
+    

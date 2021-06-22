@@ -37,7 +37,7 @@ Date: 2020/08/10
   <arg name="py_openpose_path" default="" />
 
 
-  <include file="$(find ros_openpose)/launch/core.launch" >
+  <include file="$(find ros_openpose)/launch/core_hand.launch" >
     <arg name="print" value="$(arg print)" />
     <arg name="no_depth" value="$(arg no_depth)" />
     <arg name="skeleton" value="$(arg skeleton)" />
@@ -63,7 +63,7 @@ Date: 2020/08/10
     </include>
     <!-- invoke rviz -->
     <group if="$(arg rviz)" >
-      <node pkg="rviz" type="rviz" respawn="false" required="true" name="rviz" args="-d $(find ros_openpose)/files/person_pointcloud_azurekinect.rviz" />
+      <node pkg="rviz" type="rviz" respawn="false" required="true" name="rviz" args="-d $(find ros_openpose)/files/person_pointcloud_azurekinect_hand.rviz" />
     </group>
   </group>
 
@@ -75,7 +75,7 @@ Date: 2020/08/10
     </include>
     <!-- invoke rviz -->
     <group if="$(arg rviz)" >
-      <node pkg="rviz" type="rviz" respawn="false" required="true" name="rviz" args="-d $(find ros_openpose)/files/only_person_azurekinect.rviz" />
+      <node pkg="rviz" type="rviz" respawn="false" required="true" name="rviz" args="-d $(find ros_openpose)/files/only_person_azurekinect_hand.rviz" />
     </group>
   </group>
 </launch>
